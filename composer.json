@@ -1,0 +1,15 @@
+{
+  "require": {
+    "php": ">=7.2 <8.1"
+  },
+  "autoload": {
+    "psr-4" : { "ILIAS\\Plugin\\TestCronInterface\\" : "./classes" },
+    "classmap": ["./classes"],
+    "exclude-from-classmap": []
+  },
+  "require-dev": {
+    "captainhook/plugin-composer": "^5.1",
+    "vimeo/psalm": "^3.7",
+    "friendsofphp/php-cs-fixer": "^2.16"
+  }
+}

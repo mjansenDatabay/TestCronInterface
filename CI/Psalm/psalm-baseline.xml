@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="3.18.2@19aa905f7c3c7350569999a93c40ae91ae4e1626">
+  <file src="classes/Cron/TestCronInterfaceJob.php">
+    <UndefinedClass occurrences="1">
+      <code>ilCronJob</code>
+    </UndefinedClass>
+  </file>
+  <file src="classes/class.ilTestCronInterfacePlugin.php">
+    <UndefinedClass occurrences="1">
+      <code>ilUserInterfaceHookPlugin</code>
+    </UndefinedClass>
+  </file>
+  <file src="classes/class.ilTestCronInterfaceUIHookGUI.php">
+    <UndefinedClass occurrences="1">
+      <code>ilUIHookPluginGUI</code>
+    </UndefinedClass>
+  </file>
+</files>
