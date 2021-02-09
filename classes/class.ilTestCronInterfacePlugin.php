@@ -53,7 +53,7 @@ class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin implements ilC
     /**
      * @inheritDoc
      */
-    public function getCronJobInstances()
+    public function getCronJobInstances() : array
     {
         return [
             new TestCronInterfaceJob($this, $this->dic->logger()->root()),
@@ -63,7 +63,7 @@ class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin implements ilC
     /**
      * @inheritDoc
      */
-    public function getCronJobInstance($a_job_id)
+    public function getCronJobInstance(string $jobId) : ilCronJob
     {
         foreach ($this->getCronJobInstances() as $cronJob) {
             if ($a_job_id === $cronJob->getId()) {
