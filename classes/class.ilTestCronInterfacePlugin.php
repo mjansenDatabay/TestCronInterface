@@ -66,11 +66,11 @@ class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin implements ilC
     public function getCronJobInstance(string $jobId) : ilCronJob
     {
         foreach ($this->getCronJobInstances() as $cronJob) {
-            if ($a_job_id === $cronJob->getId()) {
+            if ($jobId === $cronJob->getId()) {
                 return $cronJob;
             }
         }
 
-        throw new OutOfBoundsException(sprintf("Could not find any job for id '%s'", $a_job_id));
+        throw new OutOfBoundsException(sprintf("Could not find any job for id '%s'", $jobId));
     }
 }
