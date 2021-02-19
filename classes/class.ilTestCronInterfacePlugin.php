@@ -2,13 +2,13 @@
 /* Copyright (c) 1998-2021 ILIAS open source, Extended GPL, see docs/LICENSE */
 
 use ILIAS\DI\Container;
-use ILIAS\Plugin\CourseBooking\Cron\TestCronInterfaceJob;
+use ILIAS\Plugin\TestCronInterface\Cron\TestCronInterfaceJob;
 
 /**
  * Class ilTestCronInterfacePlugin
  * @author Michael Jansen <mjansen@databay.de>
  */
-class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin implements ilCronJobProvider
+class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin
 {
     /** @var Container */
     private $dic;
