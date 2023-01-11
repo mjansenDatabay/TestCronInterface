@@ -14,22 +14,13 @@ class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin
     private $dic;
 
     /**
-     * ilTestCronInterfacePlugin constructor.
-     */
-    public function __construct()
-    {
-        global $DIC;
-
-        $this->dic = $DIC;
-
-        parent::__construct();
-    }
-
-    /**
      * @inheritdoc
      */
-    protected function init()
+    protected function init(): void
     {
+	    global $DIC;
+	    $this->dic = $DIC;
+
         parent::init();
         $this->registerAutoloader();
     }
@@ -42,7 +33,7 @@ class ilTestCronInterfacePlugin extends ilUserInterfaceHookPlugin
     /**
      * @inheritDoc
      */
-    public function getPluginName()
+    public function getPluginName(): string
     {
         $class = substr(self::class, 2);
         $pluginPosition = strrpos($class, 'Plugin');
